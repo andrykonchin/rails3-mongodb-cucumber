@@ -1,0 +1,7 @@
+<h2>New comment</h2>
+
+<%= form_for [article, Comment.new], :remote => true, :html => { :'data-type' => 'html', :class => "new-comment-form" } do |f| %>
+  <p><%= f.label :name %> <%= f.text_field :name %></p>
+  <p><%= f.label :content %> <%= f.text_area :content %></p>
+  <p><%= f.submit "Create" %></p>
+<% end %>

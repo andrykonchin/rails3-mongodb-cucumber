@@ -1,0 +1,20 @@
+<%= form_for article do |f| %>
+  <%= render :partial => "shared/error_messages", :locals => { :model => article } %>
+
+  <div>
+    <%= f.label :name %> <br/>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :content %> <br/>
+    <%= f.text_area :content %>
+  </div>
+
+  <div>
+    <%= f.label :author_id %> <br/>
+    <%= f.collection_select :author_id, Author.all, :id, :name %>
+  </div>
+
+  <%= f.submit "Save"%>
+<% end%>

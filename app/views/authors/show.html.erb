@@ -1,0 +1,13 @@
+<h1>Author</h1>
+
+<div>
+  <div>
+    <h2>Name</h2>
+    <p><%= @author.name %></p>
+  </div>
+</div>
+
+<div>
+  <%= link_to 'Edit', edit_author_path(@author) %>
+  <%= link_to 'Delete', author_path(@author), :method => :delete %>
+</div>
